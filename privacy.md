@@ -58,6 +58,23 @@ through the iPhone's speaker and record no audio. The match analysis
 (rallies, how each pair moved, speeds) is computed from the court
 positions above and stored with them.
 
+**Garmin watches.** Only if you connect a Garmin: choosing watches opens
+the Garmin Connect app, which hands back the watches you picked, and Volea
+on the Garmin then sends each finished match (shots, heart rate, calories,
+distance, steps and the score) and live updates during play to Volea on
+your iPhone over Bluetooth, through Garmin's Connect IQ link. Volea on the
+iPhone sends the watch your scoring and shot settings the same way. Nothing
+goes to us. A match you save on the Garmin is also an activity in Garmin
+Connect, handled by Garmin under Garmin's own terms, like any Garmin
+activity.
+
+**Apple Health import.** Only if you turn on Import from Apple Health
+(Settings → Garmin & other watches): with your permission, Volea reads the
+racket workouts other apps saved to Apple Health (tennis, pickleball,
+racquetball and squash, the types apps use for padel), with their heart
+rate, energy and distance, to add them as sessions or fill in a match Volea
+already has. They stay on your iPhone like every other session.
+
 **Your profile.** Anything you add to your profile (name, photo, gender,
 birth year, height, level, club, racket, goal) is optional, stays on your
 iPhone, and is used only to show you your own profile. You pick the photo
@@ -108,9 +125,12 @@ stored on-device.
 
 ## Your controls
 
-- **Permissions:** HealthKit, Motion, Camera, and Location access can each be
-  declined at the prompt or revoked any time in iOS Settings and the
-  Health app. The app degrades gracefully.
+- **Permissions:** HealthKit, Motion, Camera, Location and Bluetooth (asked
+  for only when you connect a Garmin) can each be declined at the prompt or
+  revoked any time in iOS Settings and the Health app. The app degrades
+  gracefully.
+- **Garmin:** Settings → Garmin & other watches → Unlink Garmin stops the
+  link; Import from Apple Health can be switched off there too.
 - **Export:** Settings → Data → Export all sessions gives you everything
   as a JSON file you own.
 - **Profile:** every profile field can be cleared, and the photo removed

@@ -39,6 +39,10 @@ Heart rate comes from your Apple Watch during a match. iOS never tells apps what
 
 During a match on the watch, say "Hey Siri, Volea point us", "Volea point them" or "Undo point in Volea". It works from the watch face too.
 
+## Can I use Volea with a Garmin?
+
+Yes, in two ways. Volea for Garmin (a Connect IQ app for Garmin watches) keeps the score, counts your shots and sends each match to Volea on your iPhone: install it on the watch, then in Volea's Settings, Garmin & other watches, tap Connect your Garmin and pick the watch in Garmin Connect. Or, with any Garmin, turn on Apple Health sharing in Garmin Connect and Import from Apple Health in Volea: your racket workouts arrive with heart rate and calories.
+
 ## Does Volea send my data anywhere?
 
 No. Your shots, heart rate, court positions and scores stay on your iPhone and Apple Watch, and move between them only over Apple's encrypted device-to-device link. Court Cam never records video. Details are in the [privacy policy]({{ site.baseurl }}/privacy/).
