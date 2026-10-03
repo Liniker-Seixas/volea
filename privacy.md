@@ -13,29 +13,38 @@ permalink: /privacy/
 
 Volea has no servers. Everything the app records (your shots, heart
 rate, workouts, locations, court positions and match scores) stays on
-your iPhone and Apple Watch. Court Cam never records video. Nothing is collected by us, transmitted to us, shared with
-third parties, sold, or used for advertising. We could not read your data
-even if we wanted to.
+your own devices: your iPhone, your Apple Watch, and a Garmin if you link
+one. It leaves them only in a backup file you choose to save. Court Cam
+never records video. Nothing is collected by us, transmitted to us, sold,
+or used for advertising. We could not read your data even if we wanted
+to.
 
 ## What the app processes, and why
 
-**Health and fitness data (HealthKit).** With your permission, Volea
-reads your heart rate, active energy, and distance during workout sessions
-you start, and saves your padel sessions as workouts in Apple Health.
-This data is used solely to show you your own statistics. It is never used
-for advertising or marketing, never disclosed to third parties, and never
+**Health and fitness data (HealthKit).** With your permission, Volea on
+your Apple Watch reads your heart rate, active energy, and distance during
+workout sessions you start, and saves your padel sessions as workouts in
+Apple Health. With auto-detect on, the watch also checks your heart rate
+over the last few minutes, every so often, to notice when you start
+playing; those readings are compared on the watch and not kept. This data
+is used solely to show you your own statistics. It is never used for
+advertising or marketing, never disclosed to third parties, and never
 uploaded by Volea to any cloud service, in line with Apple's HealthKit
-guidelines.
+guidelines. It leaves your devices only if you export a backup yourself.
 
 **Motion data.** During a session (and, if enabled, while the watch app is
 open for auto-detection), wrist motion is processed in real time on your
 Apple Watch to detect and classify shots. Raw motion samples are processed
 in memory and discarded. Only the derived results (shot type, time,
-intensity, direction) are stored. To sense which wrist you wear the watch
-on, Volea also asks watchOS to keep its standard on-watch accelerometer
-history (the system keeps it for up to three days); Volea summarizes it on
-the watch into a single wearing verdict and never stores or sends the raw
-data.
+intensity, direction) are stored. The watch also counts your steps
+during a match, and, with auto-detect on, over the last few minutes to
+notice play. To sense which wrist you wear the watch on, Volea also asks
+watchOS to keep its standard on-watch accelerometer history (the system
+keeps it for up to three days); Volea summarizes it on the watch into a
+single wearing verdict and never stores or sends the raw data. Wear Check,
+a fit test you can run on the watch, keeps its raw motion trace only when
+Debug mode is on: the trace is then sent to your iPhone, where you can
+share it to help diagnose shot detection.
 
 **Camera (Court Cam).** Only when you open Court Cam and allow camera
 access, Volea uses the back camera to follow the players on court. Each
@@ -69,7 +78,8 @@ Connect, handled by Garmin under Garmin's own terms, like any Garmin
 activity.
 
 **Apple Health import.** Only if you turn on Import from Apple Health
-(Settings → Garmin & other watches): with your permission, Volea reads the
+(Settings → Garmin & other watches): with your permission, Volea on your
+iPhone reads the
 racket workouts other apps saved to Apple Health (tennis, pickleball,
 racquetball and squash, the types apps use for padel), with their heart
 rate, energy and distance, to add them as sessions or fill in a match Volea
@@ -86,11 +96,11 @@ small copy of your photo, and your settings are kept in your own iCloud
 account using Apple's iCloud key-value storage, so a new iPhone signed in to
 your Apple ID picks them up. That data is stored by Apple under your
 account; Volea's developer has no access to it. You can turn sync off in
-Settings → iCloud & backup.
+Settings → Backup.
 
-**Backups.** "Back up everything" creates one file with your sessions,
-profile, photo and settings. It goes only where you save or send it (for
-example your iCloud Drive), and "Restore from a backup" reads it back.
+**Backups.** "Back up everything" creates one file with your sessions
+(heart rate included), profile, photo and settings. It goes only where you
+save or send it, and "Restore from a backup" reads it back.
 
 **Debug logs.** Only if you turn on Debug mode (Settings → Debugging),
 Volea writes a log of app events (shots, points, syncs, Court Cam steps,
@@ -98,21 +108,23 @@ errors) to a file on your iPhone and watch. It can include heart rate and
 shot data. Logs never leave your devices unless you share them, and you
 can clear them at any time.
 
-**Location.** With your permission, Volea captures one coarse location
-fix when a session starts, so the session can be tagged with the venue.
-The coordinates and venue name are stored only inside the session record
-on your devices. You can decline location access and everything else
-still works.
+**Location.** With your permission, Volea on your Apple Watch captures
+one coarse location fix when a session starts, so the session can be
+tagged with the venue; the venue name is looked up with Apple's location
+service. The coordinates and venue name are stored only inside the session
+record on your devices. You can decline location access and everything
+else still works.
 
 **Match scores and settings.** Scores you log and preferences you set are
 stored on-device.
 
 ## Where your data lives
 
-- On your iPhone and Apple Watch, in the app's private storage, protected
-  by iOS device encryption.
-- Data moves between your watch and phone exclusively through Apple's
-  encrypted Watch Connectivity channel.
+- On your iPhone, Apple Watch and linked Garmin, in the app's private
+  storage, protected by their device encryption.
+- An Apple Watch and your iPhone exchange data only through Apple's
+  encrypted Watch Connectivity channel; a linked Garmin and your iPhone
+  only through Garmin's Connect IQ Bluetooth link.
 - Your device backups (iCloud or computer backups, managed by Apple under
   Apple's terms) may include the app's data like any other app.
 
@@ -131,8 +143,8 @@ stored on-device.
   gracefully.
 - **Garmin:** Settings → Garmin & other watches → Unlink Garmin stops the
   link; Import from Apple Health can be switched off there too.
-- **Export:** Settings → Data → Export all sessions gives you everything
-  as a JSON file you own.
+- **Export:** Settings → Backup → Back up everything gives you everything
+  as one JSON file you own.
 - **Profile:** every profile field can be cleared, and the photo removed
   (touch and hold it).
 - **Delete:** Settings → Data lets you delete demo data or every session
