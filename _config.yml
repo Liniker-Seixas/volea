@@ -1,0 +1,6 @@
+title: Volea
+description: Your Apple Watch becomes a padel coach. Every shot detected, every match understood.
+url: https://liniker-seixas.github.io
+baseurl: /volea
+exclude:
+  - README.md
